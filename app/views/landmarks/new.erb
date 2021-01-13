@@ -1,16 +1,11 @@
 
-<table>
-<tr>
-  <th>Name</th>
-  <th>Year Completed</th>
-</tr>
-<tr>
-  <td><%= @landmark.name %></td>
-  <td><%= @landmark.year_completed %></td>
-</tr>
-<table>
+<h1>Add a new Landmark:</h1>
 
+<form action="/landmarks" method="POST">
+<label for="landmark_name">Name</label><br>
+<input id="landmark_name" type="text" name="landmark[name]" /><br>
+<label for="landmark_year_completed">Year Completed</label><br>
+<input id="landmark_year_completed" type="text" name="landmark[year_completed]" /><br>
 
-<a class="button" href="/landmarks/<%= @landmark.id %>/edit">Edit</a>
-<a class="button" href="/landmarks">Landmarks</a>
-<a class="button" href="/">Go Home</a>
+<input type="submit" value="Create New Landmark">
+</form>
